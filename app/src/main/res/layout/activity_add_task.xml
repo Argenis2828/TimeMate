@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".AddTaskActivity">
+
+    <TextView
+        android:id="@+id/tvTitleAdd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Agregar nueva tarea"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Título"
+        android:inputType="text"
+        android:layout_marginTop="16dp"
+        android:minHeight="48dp"
+        android:autofillHints="none"
+        tools:ignore="HardcodedText,TooWide"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleAdd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/etDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Descripción (opcional)"
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        android:gravity="top"
+        android:layout_marginTop="12dp"
+        android:autofillHints="none"
+        android:textColor="@android:color/black"
+        tools:ignore="HardcodedText,TooWide"
+        app:layout_constraintTop_toBottomOf="@id/etTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnPickReminder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Elegir recordatorio"
+        android:layout_marginTop="12dp"
+        android:minHeight="48dp"
+        tools:ignore="HardcodedText,TooWide"
+        app:layout_constraintTop_toBottomOf="@id/etDesc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvReminderInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sin recordatorio"
+        android:layout_marginTop="8dp"
+        tools:ignore="HardcodedText"
+        app:layout_constraintTop_toBottomOf="@id/btnPickReminder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnClearReminder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Quitar recordatorio"
+        android:layout_marginTop="8dp"
+        android:minHeight="48dp"
+        tools:ignore="HardcodedText,TooWide"
+        app:layout_constraintTop_toBottomOf="@id/tvReminderInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Guardar tarea"
+        android:layout_marginTop="18dp"
+        android:minHeight="48dp"
+        tools:ignore="HardcodedText,TooWide"
+        app:layout_constraintTop_toBottomOf="@id/btnClearReminder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

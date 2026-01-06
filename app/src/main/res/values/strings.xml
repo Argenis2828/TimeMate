@@ -1,0 +1,58 @@
+<resources>
+
+    <!-- App -->
+    <string name="app_name">TimeMate</string>
+    <string name="app_title_tasks">TimeMate</string>
+    <string name="app_subtitle">Organiza tus tareas con recordatorios</string>
+
+    <!-- General -->
+    <string name="add_task">Nueva tarea</string>
+    <string name="edit_task">Editar tarea</string>
+    <string name="save">Guardar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="delete">Eliminar</string>
+
+    <!-- Estados -->
+    <string name="status_pending">Pendiente</string>
+    <string name="status_done">Completada</string>
+
+    <!-- Empty -->
+    <string name="empty_state">
+        No tienes tareas todavía.
+        Toca “Nueva tarea” para agregar una.
+    </string>
+
+    <!-- Menú -->
+    <string name="menu_about">Acerca de</string>
+    <string name="menu_settings">Ajustes</string>
+
+    <!-- Campos -->
+    <string name="hint_title">Título</string>
+    <string name="hint_desc">Descripción</string>
+    <string name="hint_time">Hora</string>
+
+    <!-- Mensajes -->
+    <string name="msg_task_saved">Tarea guardada</string>
+    <string name="msg_task_deleted">Tarea eliminada</string>
+    <string name="msg_undo">DESHACER</string>
+
+    <!-- Acerca de -->
+    <string name="about_title">Acerca de TimeMate</string>
+
+    <string name="about_body">
+Universidad Abierta Para Adultos (UAPA)\n
+Escuela de Ingeniería y Tecnología\n\n
+Asignatura: Programación de Dispositivos Móviles (ISW307)\n
+Grupo: G – Programación Dispositivos Móviles\n\n
+Facilitador:\n
+Joan Manuel Gregorio Pérez\n\n
+Participantes:\n
+• Argenis Almonte Martínez\n
+• Angely De León Acevedo\n
+• Nayely Núñez Francisco\n
+• Ilvin Pérez De la Cruz\n\n
+Aplicación desarrollada como proyecto final
+        Programación Dispositivos Móviles.
+    </string>
+
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Márgenes generales -->
+    <dimen name="screen_padding">12dp</dimen>
+    <dimen name="fab_margin">20dp</dimen>
+
+    <!-- Tarjetas -->
+    <dimen name="card_padding">14dp</dimen>
+    <dimen name="card_radius">16dp</dimen>
+    <dimen name="card_spacing">10dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+
+</resources>
