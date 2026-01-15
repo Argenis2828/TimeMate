@@ -1,23 +1,34 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Tema principal de la app -->
     <style name="Theme.TimeMate" parent="Theme.Material3.DayNight.NoActionBar">
 
-        <!-- Colores principales -->
+        <!-- colores base del tema -->
         <item name="colorPrimary">@color/timemate_primary</item>
         <item name="colorSecondary">@color/timemate_secondary</item>
 
-        <!-- Ocultar barra de estado (mejor para capturas y evitar notificaciones) -->
-        <item name="android:windowFullscreen">true</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!-- esto define superficie y el color del texto encima -->
+        <item name="colorSurface">@color/timemate_surface</item>
+        <item name="colorOnSurface">@color/timemate_on_surface</item>
 
+        <!-- fondo general de la app -->
+        <item name="android:colorBackground">@color/timemate_background</item>
+
+        <!-- barras transparentes para que edge-to-edge se vea moderno -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+
+        <item name="android:windowFullscreen">false</item>
     </style>
 
-    <!-- Tema de la pantalla Splash -->
     <style name="Theme.TimeMate.Splash" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- color de fondo del splash -->
         <item name="android:windowBackground">@color/timemate_primary</item>
-        <item name="android:windowFullscreen">true</item>
+
+        <!-- dejamos barras transparentes también -->
         <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+
+        <item name="android:windowFullscreen">true</item>
     </style>
 
 </resources>

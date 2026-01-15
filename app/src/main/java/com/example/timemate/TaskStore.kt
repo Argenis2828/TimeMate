@@ -50,7 +50,7 @@ object TaskStore {
         dao(context).delete(task)
     }
 
-    // ✅ DESHACER BORRADO
+    // DESHACER BORRADO
     fun restore(context: Context, task: TaskEntity) {
         val newId = dao(context).insert(task.copy(id = 0)).toInt()
 

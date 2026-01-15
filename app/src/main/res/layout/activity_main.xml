@@ -9,56 +9,67 @@
     android:background="@drawable/bg_main_gradient"
     tools:context=".MainActivity">
 
-    <!-- AppBar -->
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppBar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+
             app:title="@string/app_title_tasks"
             app:subtitle="@string/app_subtitle"
             app:titleCentered="false"
-            app:navigationIcon="@drawable/ic_calendar"
-            app:menu="@menu/menu_main" />
+
+            app:titleTextColor="?attr/colorOnPrimary"
+            app:subtitleTextColor="?attr/colorOnPrimary"
+            app:navigationIconTint="?attr/colorOnPrimary"
+            app:itemIconTint="?attr/colorOnPrimary"
+
+            app:menu="@menu/menu_main"
+            app:navigationIcon="@drawable/ic_calendar" />
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!-- Lista -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvTasks"
+    <FrameLayout
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/screen_padding"
-        tools:listitem="@layout/item_task"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <!-- Empty -->
-    <TextView
-        android:id="@+id/tvEmpty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="24dp"
-        android:text="@string/empty_state"
-        android:textSize="16sp"
-        android:alpha="0.75"
-        android:visibility="gone"
-        app:layout_anchor="@id/rvTasks"
-        app:layout_anchorGravity="center"
-        tools:visibility="visible" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTasks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/screen_padding"
+            android:clipToPadding="false"
+            tools:listitem="@layout/item_task" />
 
-    <!-- Botón -->
+        <TextView
+            android:id="@+id/tvEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="24dp"
+            android:text="@string/empty_state"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:alpha="0.80"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </FrameLayout>
+
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/fabAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         android:text="@string/add_task"
-        app:icon="@drawable/ic_add"
-        app:layout_anchor="@id/rvTasks"
-        app:layout_anchorGravity="bottom|end" />
+        app:icon="@drawable/ic_add" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

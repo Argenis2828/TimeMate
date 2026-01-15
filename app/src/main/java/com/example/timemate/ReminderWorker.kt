@@ -10,10 +10,13 @@ class ReminderWorker(
 ) : Worker(context, params) {
 
     override fun doWork(): Result {
-        val title = inputData.getString("title") ?: "Recordatorio"
+
+        // obtenemos los datos enviados desde el scheduler
+        val title = inputData.getString("title") ?: "recordatorio"
         val desc = inputData.getString("desc") ?: ""
         val id = inputData.getInt("id", 0)
 
+        // mostramos la notificación cuando llega la hora
         NotificationHelper.show(
             applicationContext,
             notificationId = 100000 + id,
@@ -21,6 +24,7 @@ class ReminderWorker(
             message = desc
         )
 
+        // indicamos a workmanager que el trabajo terminó correctamente
         return Result.success()
     }
 }

@@ -1,7 +1,26 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.TimeMate" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+    <style name="Theme.TimeMate" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="colorPrimary">@color/timemate_primary</item>
+        <item name="colorSecondary">@color/timemate_secondary</item>
+
+        <item name="colorSurface">@color/timemate_surface</item>
+        <item name="colorOnSurface">@color/timemate_on_surface</item>
+
+        <item name="android:colorBackground">@color/timemate_background</item>
+
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+
+        <item name="android:windowFullscreen">false</item>
     </style>
+
+    <style name="Theme.TimeMate.Splash" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/timemate_primary</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
 </resources>

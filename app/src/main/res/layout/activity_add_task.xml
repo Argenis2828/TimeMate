@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -13,52 +14,70 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Agregar nueva tarea"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:textStyle="bold"
+        android:textColor="?attr/colorOnSurface"
         tools:ignore="HardcodedText"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <EditText
-        android:id="@+id/etTitle"
+    <!-- titulo (material) -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Título"
-        android:inputType="text"
         android:layout_marginTop="16dp"
-        android:minHeight="48dp"
-        android:autofillHints="none"
-        tools:ignore="HardcodedText,TooWide"
+        app:boxStrokeColor="?attr/colorPrimary"
+        app:hintTextColor="?attr/colorOnSurface"
         app:layout_constraintTop_toBottomOf="@id/tvTitleAdd"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <EditText
-        android:id="@+id/etDesc"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Título"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColor="?attr/colorOnSurface"
+            tools:ignore="HardcodedText" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- descripcion (material) -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilDesc"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Descripción (opcional)"
-        android:inputType="textMultiLine"
-        android:minLines="3"
-        android:gravity="top"
         android:layout_marginTop="12dp"
-        android:autofillHints="none"
-        android:textColor="@android:color/black"
-        tools:ignore="HardcodedText,TooWide"
-        app:layout_constraintTop_toBottomOf="@id/etTitle"
+        app:boxStrokeColor="?attr/colorPrimary"
+        app:hintTextColor="?attr/colorOnSurface"
+        app:layout_constraintTop_toBottomOf="@id/tilTitle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descripción (opcional)"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:gravity="top"
+            android:textColor="?attr/colorOnSurface"
+            tools:ignore="HardcodedText" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnPickReminder"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Elegir recordatorio"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="14dp"
         android:minHeight="48dp"
-        tools:ignore="HardcodedText,TooWide"
-        app:layout_constraintTop_toBottomOf="@id/etDesc"
+        android:text="Elegir recordatorio"
+        tools:ignore="HardcodedText"
+        app:layout_constraintTop_toBottomOf="@id/tilDesc"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -66,8 +85,10 @@
         android:id="@+id/tvReminderInfo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Sin recordatorio"
         android:layout_marginTop="8dp"
+        android:text="Sin recordatorio"
+        android:textColor="?attr/colorOnSurface"
+        android:alpha="0.75"
         tools:ignore="HardcodedText"
         app:layout_constraintTop_toBottomOf="@id/btnPickReminder"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,10 +98,10 @@
         android:id="@+id/btnClearReminder"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Quitar recordatorio"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:minHeight="48dp"
-        tools:ignore="HardcodedText,TooWide"
+        android:text="Quitar recordatorio"
+        tools:ignore="HardcodedText"
         app:layout_constraintTop_toBottomOf="@id/tvReminderInfo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -89,10 +110,10 @@
         android:id="@+id/btnSave"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Guardar tarea"
         android:layout_marginTop="18dp"
         android:minHeight="48dp"
-        tools:ignore="HardcodedText,TooWide"
+        android:text="Guardar tarea"
+        tools:ignore="HardcodedText"
         app:layout_constraintTop_toBottomOf="@id/btnClearReminder"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
